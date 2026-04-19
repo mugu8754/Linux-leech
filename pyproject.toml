@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "folder-telegram-uploader"
+version = "1.0.0"
+description = "Ubuntu folder-to-Telegram uploader with detailed terminal logs"
+requires-python = ">=3.10"
+dependencies = [
+  "pyrogram>=2.0.106",
+  "TgCrypto>=1.2.5",
+  "python-dotenv>=1.0.1"
+]
+
+[tool.setuptools]
+packages = ["folder_telegram_uploader"]

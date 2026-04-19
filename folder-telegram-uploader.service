@@ -1,0 +1,18 @@
+[Unit]
+Description=Folder to Telegram Uploader
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/opt/folder-telegram-uploader
+EnvironmentFile=/opt/folder-telegram-uploader/.env
+ExecStart=/usr/bin/python3 -m folder_telegram_uploader.app
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
